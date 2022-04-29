@@ -9,6 +9,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { VasarlasComponent } from './pages/vasarlas/vasarlas.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './shared/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

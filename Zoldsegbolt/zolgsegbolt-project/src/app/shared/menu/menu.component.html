@@ -1,1 +1,7 @@
-<p>menu works!</p>
+<select [(ngModel)]="currentPage" (change)="menuSwitch()">
+  <option value="main">Main</option>
+  <option value="login">Login</option>
+  <option value="register">register</option>
+  <option value="settings">settings</option>
+  <option value="vasarlas">vasarlas</option>
+</select>
