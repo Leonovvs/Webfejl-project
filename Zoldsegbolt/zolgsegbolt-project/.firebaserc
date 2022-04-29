@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "zoldsegbolt-webker": {
+      "hosting": {
+        "zolgsegbolt-project": [
+          "zoldsegbolt-webker"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "zoldsegbolt-webker"
+  }
+}
