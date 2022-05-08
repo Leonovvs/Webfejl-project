@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {AuthGuard} from "./shared/services/auth.guard";
 
 const routes: Routes = [
   {
     path: 'main',
-    loadChildren: () => import('./pages/main/main.module').then(m => m.MainModule)
+    loadChildren: () => import('./pages/main/main.module').then(m => m.MainModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -16,11 +18,13 @@ const routes: Routes = [
   },
   {
     path: 'settings',
-    loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule)
+    loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule),
+    // canActivate: [AuthGuard]
   },
   {
     path: 'vasarlas',
-    loadChildren: () => import('./pages/vasarlas/vasarlas.module').then(m => m.VasarlasModule)
+    loadChildren: () => import('./pages/vasarlas/vasarlas.module').then(m => m.VasarlasModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'not-found',

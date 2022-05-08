@@ -1,1 +1,51 @@
-<p>settings works!</p>
+<span class="loading-indicator" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</span>
+
+
+<div class="main_component">
+  <div class="div-flex">
+    <h1>Change user data</h1>
+<!--    <p>Updated: {{(this.user != undefined) ? this.user.updated.toString() : "" | dateFormat}}</p>-->
+    <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+
+      <input matInput type="text" formControlName="id" hidden/>
+      <input matInput type="text" formControlName="email" hidden/>
+      <input matInput type="text" formControlName="in_bucket" hidden/>
+<!--      <input matInput type="text" formControlName="updated" hidden/>-->
+
+      <mat-form-field>
+        <mat-label for="username">Felhasználónév: </mat-label>
+        <input matInput type="text" formControlName="username"/>
+      </mat-form-field>
+      <div formGroupName="name" class="subForm">
+        <mat-form-field>
+          <mat-label for="firstname">First name: </mat-label>
+          <input matInput type="text" formControlName="firstname"/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="lastname">Last name: </mat-label>
+          <input matInput type="text" formControlName="lastname"/>
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <mat-label for="address">Szállítási cím: </mat-label>
+        <input matInput type="text" formControlName="address"/>
+      </mat-form-field>
+      <div>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" type="submit">Save</button>
+                </span>
+
+      </div>
+    </form>
+
+    <span class="buttons">
+        <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+    </span>
+    <span class="buttons">
+        <button mat-raised-button class="delete_button" color="warn" (click)="deleteAcc()">Delete Account</button>
+    </span>
+
+  </div>
+</div>

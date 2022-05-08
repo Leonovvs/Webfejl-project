@@ -24,4 +24,9 @@ export class AuthService {
   logout() {
     return this.auth.signOut();
   }
+
+  async deleteUser() {
+    // @ts-ignore
+    (await this.auth.currentUser).delete();
+  }
 }

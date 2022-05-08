@@ -7,7 +7,7 @@
     <mat-icon>logout</mat-icon>
     <span>Logout</span>
   </a>
-  <a mat-list-item routerLink="/signup" (click)="close()">
+  <a mat-list-item routerLink="/register" (click)="close()" *ngIf="true">
     <mat-icon>app_registration</mat-icon>
     <span>Register</span>
   </a>
@@ -15,13 +15,13 @@
     <mat-icon>grid_view</mat-icon>
     <span>Main</span>
   </a>
-  <a mat-list-item routerLink="/gallery" (click)="close()">
-    <mat-icon>collections</mat-icon>
-    <span>Gallery</span>
+  <a mat-list-item routerLink="/settings" (click)="close()">
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
   </a>
-  <a mat-list-item routerLink="/contact" (click)="close()">
-    <mat-icon>info</mat-icon>
-    <span>Contact</span>
+  <a mat-list-item routerLink="/vasarlas" (click)="close()">
+    <mat-icon>store</mat-icon>
+    <span>Vasarlas</span>
   </a>
 </mat-nav-list>
 

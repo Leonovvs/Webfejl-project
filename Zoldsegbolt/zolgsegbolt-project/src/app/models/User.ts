@@ -8,4 +8,5 @@ export interface User {
   }
   address: string;
   in_bucket: [];
+  // updated: string;
 }
